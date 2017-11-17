@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+
+	<package name="user_package" namespace="/" extends="struts-default">
+
+		<!-- 用户的登录和注册 -->
+		<action name="user_registry" class="userAction"
+			method="registry">
+			<result name="success" type="redirect">/index.jsp</result>
+		</action>
+		<action name="user_login" class="userAction"
+			method="login">
+			<result name="success" type="redirectAction">emp_find_findAll</result>
+		</action>
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
